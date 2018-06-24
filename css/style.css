@@ -1,0 +1,226 @@
+/* typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.hero-text{
+  color: #fff;
+}
+
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* you need to set this to assign to the main element a min height of 100% */
+  
+  height: 100%;
+}
+
+body {
+  margin:0;
+  padding:0;
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: 'IBM Plex', sans-serif;
+  color: #222; }
+/* Links
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+a {
+  color: #C21413; }
+
+#side-nav a {
+  color: #FAFAFA;
+}
+
+
+/** NAVIGATION **/
+
+/* --------------------------------
+
+Main styles
+
+-------------------------------- */
+
+.container-all {
+  /* set a min-height and a z-index to be sure that the main element completely covers the lateral menu */
+  
+  min-height: 100%;
+  position: relative;
+  z-index: 2;
+  /* Force Hardware Acceleration in WebKit */
+  
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.container-all.menu-open {
+  /* translate to show the lateral menu - all content needs to be put in the .container-all to translate*/
+  
+  -webkit-transform: translateX(-260px);
+  -moz-transform: translateX(-260px);
+  -ms-transform: translateX(-260px);
+  -o-transform: translateX(-260px);
+  transform: translateX(-260px);
+}
+
+@media only screen and (min-width: 768px) {
+  .container-all {
+    padding-top: 70px;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  height: 90px;
+  width: 100%;
+  background: #05675A;
+  z-index: 3;
+  /* Force Hardware Acceleration in WebKit */
+  
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+header.menu-open {
+  /* translate to show the lateral menu */
+  
+  -webkit-transform: translateX(-260px);
+  -moz-transform: translateX(-260px);
+  -ms-transform: translateX(-260px);
+  -o-transform: translateX(-260px);
+  transform: translateX(-260px);
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    height: 90px;
+  }
+  #nav-trigger {
+  display: none;}
+  #site-title{
+  text-align: center;
+  }
+}
+
+#site-title {
+  display: block;
+  float: left;
+  margin: 25px 0 0 25px;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+#site-title a {
+  color: #F1DF00;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+#nav-trigger {
+  margin: 25px 25px 0 0;
+  text-align: right;
+  float: right;
+}
+
+#nav-trigger a{
+  color: #fafafa;
+}
+
+/* CONTAINER */
+
+.container-all{
+  padding: 0;
+  margin: 0;
+}
+
+.container-body{
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+
+.lyrics-container, .downloads-container, .covers-container{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.song-player-container, .text-sizer-container{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.center-this{
+  text-align: center;
+}
+
+
+
+.background-hero{
+  padding-top: 100px;
+  padding-bottom: 150px;
+  background-color: #05675A;
+}
+
+
+
+/* FOOTER */
+
+footer{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #05675A;
+  width: 100%;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#white-color {
+  color: #F1DF00;
+}
+
+.lightwidget__caption{
+  font-size: 14px !important;
+}
